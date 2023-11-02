@@ -1,14 +1,20 @@
-# Shipping Cost Calculator
+# LogisticsShippingRates
+Please consider the below factors while contributing
 
-## Input package weight and shipping rate
-weight = float(input("Enter the package weight in kilograms: "))
-rate = float(input("Enter the shipping rate per kilogram: "))
+Code Style:
+Maintain a consistent code style for readability.
 
-## Calculate shipping cost
-shipping_cost = weight * rate
+Documentation:
+Ensure well-documented code for effective collaboration.
 
-## Display the result
-print(f"Shipping Cost: {shipping_cost} USD")
+Testing:
+Thoroughly test your changes before submitting a pull request.
 
+Issue Tracker:
+Check the Issue Tracker for tasks.
 
-__
+Code Review:
+All contributions undergo a code review process.
+
+Licensing:
+Contributions are licensed.
