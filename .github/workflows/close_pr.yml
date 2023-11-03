@@ -8,7 +8,7 @@ jobs:
   run:
     runs-on: ubuntu-latest
     steps:
-    - uses: superbrothers/close-pull-request@v3
+    - uses: Anam020990/close-pull-request
       with:
         # Optional. Post a issue comment just before closing a pull request.
         comment: "We appreciate your contributions. However, please create PRs on your fork and not on the original project repository. Thank you!"
