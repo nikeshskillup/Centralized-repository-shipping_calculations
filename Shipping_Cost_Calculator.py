@@ -13,3 +13,5 @@ print(f"Shipping Cost: {shipping_cost} USD")
 # File added by Sklup55
 
 # Here is new update by Sklup55
+
+# Here is na 3rd pdate by Sklup55
