@@ -1,32 +1,14 @@
 name: Close Pull Request
 
 on:
-  pull_request:
-    types:
-      - closed
+  pull_request_target:
+    types: [opened]
 
 jobs:
-  close:
+  run:
     runs-on: ubuntu-latest
-
     steps:
-    - name: Check out repository
-      uses: actions/checkout@v2
-
-    - name: Install GitHub CLI
-      run: |
-        sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-key C99B11DEB97541F0
-        sudo apt-add-repository https://cli.github.com/packages
-        sudo apt-get update
-        sudo apt-get install gh
-
-    - name: Close pull request
-      run: |
-        # Check if the pull request was closed
-        if [ "${{ github.event_name }}" = "pull_request" ] && [ "${{ github.event.action }}" = "closed" ]; then
-          # Use GitHub CLI to close the pull request
-          gh pr close -R nikeshskillup/Centralized-repository-shipping_calculations -B main -n "${{ github.event.pull_request.number }}" --json number,state --jq '.number'
-        fi
-
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    - uses: superbrothers/close-pull-request@v3
+      with:
+        # Optional. Post a issue comment just before closing a pull request.
+        comment: "Congratulations! You have completed the lab. Closing for maintainence purpose."
