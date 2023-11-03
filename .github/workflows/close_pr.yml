@@ -11,4 +11,4 @@ jobs:
     - uses: superbrothers/close-pull-request@v3
       with:
         # Optional. Post a issue comment just before closing a pull request.
-        comment: "Congratulations! You have completed the lab. Closing for maintainence purpose."
+        comment: "We appreciate your contributions. However, please create PRs on your fork and not on the original project repository. Thank you!"
